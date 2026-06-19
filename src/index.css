@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Custom Utilities for the Bold Typography Look */
+.font-display {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.text-stroke-orange {
+  -webkit-text-stroke: 1px #F97316;
+}
+
+.title-huge {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+
+/* Custom scrollbar for beautiful dark themed content */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #171717;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F97316;
+}
+
+/* Slide in transitions for the interactive review carousel */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(18px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-18px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-right {
+  animation: slideInFromRight 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-left {
+  animation: slideInFromLeft 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom premium-styled Leaflet tooltips */
+.leaflet-tooltip-pane .custom-map-tooltip {
+  background: rgba(10, 10, 10, 0.95) !important;
+  border: 1px solid rgba(249, 115, 22, 0.45) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6) !important;
+  color: #ffffff !important;
+  font-family: inherit !important;
+  padding: 3px 6px !important;
+}
+
+.leaflet-tooltip-top:before {
+  border-top-color: rgba(249, 115, 22, 0.45) !important;
+}
+
+

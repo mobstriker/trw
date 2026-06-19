@@ -1,0 +1,6 @@
+{
+  "name": "Titan Ridge Roofing & Exteriors",
+  "description": "Premium residential and commercial roofing, storm damage restoration, and emergency response services in the Charlotte, NC metro area. Centered around elite craftsmanship, rapid drone inspections, and insurance claim navigation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
